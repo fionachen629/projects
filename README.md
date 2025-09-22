@@ -1,4 +1,44 @@
-# Project 1: Hot News Lookup (Used Python and Natural Language Processing)
+# Project 1: Portfolio Optimization (Used Python)
+
+## Problem:
+In reality, portfolios face structural rules: limits on the number of long and short positions, thresholds on position sizes, and bounds on the sum of allocations. The challenge was to build a constrained mean-variance optimization problem that reflects these realistic investment constraints while still managing risk-return tradeoffs.
+
+## Solution:
+
+### Data Preprocessing
+*a. If an asset is missing any data, exclude it.*
+<img width="1501" height="296" alt="image" src="https://github.com/user-attachments/assets/74b9b96b-a45b-4a02-996b-91d9ac1d0fcc" />
+
+*b. If, for an asset, the return for any given day exceeds 0.25 in absolute value, replace the return for that day with a moving average (of returns). If, for an asset, you need to perform this fix more than twenty times, exclude that asset.*
+
+<img width="596" height="428" alt="image" src="https://github.com/user-attachments/assets/f851dafe-268c-4f30-9a02-972ca95f9edc" />
+<img width="1473" height="446" alt="image" src="https://github.com/user-attachments/assets/ecebcb18-9db1-4895-863e-4aba30f7847b" />
+
+
+*c. Construct the vector of average asset returns for this list of assets, as well as the covariance matrix of returns.*
+<img width="320" height="290" alt="image" src="https://github.com/user-attachments/assets/61230881-c44e-4e91-89c2-98ad817ea061" />
+<img width="1426" height="470" alt="image" src="https://github.com/user-attachments/assets/c45ed4a0-8435-43bb-b5e3-8cf04859e683" />
+
+### Portfolio Constraints
+
+*The following input parameters control position sizes, number of assets, exposure levels, and risk aversion:*
+
+<img width="135" height="222" alt="image" src="https://github.com/user-attachments/assets/90f22a20-cc2d-4443-82d8-a880f093cbf4" />
+
+### Portfolio Optimization
+
+<img width="572" height="658" alt="image" src="https://github.com/user-attachments/assets/57ec695c-428d-4b4f-b635-d923f885cea6" />
+<img width="961" height="654" alt="image" src="https://github.com/user-attachments/assets/2e043ee4-5bf4-4147-9141-58e845a67fd6" />
+<img width="351" height="666" alt="image" src="https://github.com/user-attachments/assets/bc99dfe4-598d-4726-8636-ec3e87130767" />
+<img width="1070" height="688" alt="image" src="https://github.com/user-attachments/assets/beb368bb-e62b-437f-a482-817cb3fa444b" />
+<img width="678" height="84" alt="image" src="https://github.com/user-attachments/assets/d2b4105c-7046-4557-ba71-85affdb562a0" />
+
+## Potential Uses:
+1. Practical Finance Applications: Demonstrates how real-world portfolio rules (like long/short limits and minimum trade sizes) can be encoded in optimization.
+2. Risk Management: Shows how constraints affect diversification and risk-return balance.
+
+
+# Project 2: Hot News Lookup (Used Python and Natural Language Processing)
 
 ## Problem:
 Currently, we are flooded with information from different media outlets. This flood of information hinders our ability to effectively follow the most relevant information. Given the sheer magnitude of information available, we do not have the time to read through every piece of news, or even their titles, to determine which ones are more important than others. Quickly distinguishing the substantial from the trivial is ever more difficult.
@@ -74,7 +114,7 @@ Identify the most popular keywords worldwide <br>
 ![image](https://user-images.githubusercontent.com/120151846/206618640-70c5f88d-ab93-4543-9290-759f211a1783.png)
 
 
-# Project 2: Shopper Hiring Problem Project (Used BigQuery SQL and Tableau)
+# Project 3: Shopper Hiring Problem Project (Used BigQuery SQL and Tableau)
 
 ## Context
 In this simulated dataset, we have been running an A/B test on our shopper hiring funnel to see if initiating the required applicant background check earlier in the process would improve conversion rates. <br>
@@ -131,7 +171,7 @@ Recommendations:
 1. The conversion rate in social media channel’s treatment group did not improve very much. One reason is that its conversion rate in the control group is already the highest. However, even with such high control conversion rate, its treatment conversion rate is actually the lowest among the four channels. Therefore, we could evaluate the ROI of both control and treatment groups, which is channel advertising cost + $30 background fee. If treatment ROI is larger than that of the control group then we should initiate background check earlier. If it is smaller than its control group, then we should not initiate early.
 2. Perform another A/B Test to evaluate if mandatory orientation could improve the conversion rate.
 
-# Project 3: User Engagement Analysis Project (Used DBeaver PostgreSQL and Tableau)
+# Project 4: User Engagement Analysis Project (Used DBeaver PostgreSQL and Tableau)
 
 ## Context
 User dataset event.csv and email.csv to analyze why the user engagement, which is the number of logins, decreased last month.
