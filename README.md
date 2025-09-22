@@ -1,4 +1,4 @@
-# Project 1: Portfolio Optimization (Used Python)
+# Project 1: Portfolio Optimization (Used Python & Gurobi)
 
 ## Problem:
 In reality, portfolios face structural rules: limits on the number of long and short positions, thresholds on position sizes, and bounds on the sum of allocations. The challenge was to build a constrained mean-variance optimization problem that reflects these realistic investment constraints while still managing risk-return tradeoffs.
